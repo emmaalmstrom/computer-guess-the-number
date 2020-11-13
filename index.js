@@ -4,13 +4,16 @@ let MIN_NUMBER = 0
 let minGuess = MIN_NUMBER
 let maxGuess = MAX_NUMBER
 
+
 document.getElementById('too-high-btn').addEventListener('click', function () {
-   setMessage(`Is it ${guess-- - 1}`)
+    let MAX_NUMBER = MAX_NUMBER / 2
+   setMessage(`Is it ${guess}`)
  
 })
 
 document.getElementById('too-low-btn').addEventListener('click', function () {
-   setMessage(`Is it ${guess++ + 1}`)
+   let MIN_NUMBER = minGuess + guess
+    setMessage(`Is it ${guess}`)
     
 })
 
@@ -33,7 +36,6 @@ function start() {
     setMessage(`Is it ${guess}?`)
 }
 
-let guess = 50
 
 document
     .getElementById('start-btn')
